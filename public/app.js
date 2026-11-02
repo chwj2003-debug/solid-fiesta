@@ -15,7 +15,7 @@ function renderProducts(){
  $('#allProducts').textContent=showAll?'추천 4개만 보기 ↑':`전체 ${ranked.length}개 보기 ↗`;
  $('#productHeading').textContent=view==='saved'?'저장한 립 컬러':!analyzed?'내 입술 색과 비슷한 립 찾기':analysisSource==='sample'?'선택한 샘플 색과 비슷한 립':'내 입술 색과 비슷한 립';
  $('#matchSummary').hidden=false;
- if(!analyzed)$('#matchSummary').innerHTML='<span class="source-badge">분석 전</span><div><b>아래는 먼저 둘러볼 수 있는 제품이에요.</b><small>사진 분석 또는 샘플 색 찾기를 완료하면 색이 비슷한 순서로 바뀝니다.</small></div>'; 
+ if(!analyzed)$('#matchSummary').innerHTML='<span class="source-badge">분석 전</span><div><b>아래는 먼저 둘러볼 수 있는 제품이에요.</b><small>사진 분석 또는 샘플 색 찾기를 완료하면 색이 비슷한 순서로 바뀝니다.</small></div>';
  if(analyzed){const best=ranked[0];$('#matchSummary').innerHTML=`<span class="summary-swatch" style="background:${hex(analyzedRgb)}"></span><div><span class="source-badge">${analysisSource==='sample'?'샘플 색 기준':'내 사진의 입술 색 기준'}</span><b>${hex(analyzedRgb)}와 비슷한 제품 ${list.length}개</b><small>${candidates.length}개 색상을 비교해 가까운 순서로 보여드려요.${best&&best.match.delta>18?' 정확히 일치하는 색이 없어 가까운 대안을 골랐어요.':''}</small></div>`;}
 
 }
