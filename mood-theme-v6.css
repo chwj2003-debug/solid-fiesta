@@ -7,3 +7,6 @@
 
 /* One continuous photograph across the whole hero: no split background. */
 .hero{background:#ecd2e4 url('./mood-seamless-hero.png') center center / cover no-repeat;isolation:isolate}.hero-copy{position:relative;z-index:1;background:transparent}.hero-art{background:transparent}.hero-art>img{visibility:hidden}.art-wash{display:none}.hero .pill{background:#fff6fb60}.hero h2{color:#634e78}.hero-copy>p,.hero-foot{color:#927092}.editorial{text-shadow:0 1px 12px #74577b55}@media(max-width:760px){.hero{background:linear-gradient(145deg,#f0cedf,#e7d8ef)}.hero-art{background:url('./mood-seamless-hero.png') 84% center / auto 100% no-repeat}.hero-art:before{content:'';position:absolute;top:-1px;left:0;right:0;height:50px;background:linear-gradient(#ead4e8,transparent);z-index:1;pointer-events:none}.hero-art>img{visibility:hidden}.editorial,.floating-label,.hero-number{z-index:2}}
+
+@font-face{font-family:'Pretendard';font-style:normal;font-weight:700;font-display:swap;src:url('./fonts/Pretendard-Bold.woff2') format('woff2')}
+.hero h2,.hero h2 em,.hero .editorial,.hero .editorial i{font-family:'Pretendard',sans-serif;font-weight:700;font-style:normal;font-synthesis:none}
