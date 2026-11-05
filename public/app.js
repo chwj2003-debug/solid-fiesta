@@ -7,3 +7,7 @@ $('#retry').onclick=()=>{selected.clear();document.querySelectorAll('.keyword').
 $('#copy').onclick=async()=>{const text=`MOOD 상담 문의\n관심 상담: ${$('#interest').value}\n선택한 무드: ${result?.name||'상담하며 찾아보고 싶어요'}\n원하는 이미지: ${$('#concern').value.trim()||'상담하며 알아보고 싶어요'}`;try{await navigator.clipboard.writeText(text);$('#copyStatus').textContent='복사했어요. 아래 공식 채널에서 문의할 때 붙여넣어 주세요.';}catch{$('#copyStatus').textContent='자동 복사가 지원되지 않아요. 작성한 내용을 직접 복사해 공식 채널에 전달해 주세요.';}};
 const dialog=$('#lightbox');document.querySelectorAll('[data-image]').forEach(b=>b.onclick=()=>{$('#largeImage').src=b.dataset.image;dialog.showModal();});$('#closeImage').onclick=()=>dialog.close();dialog.onclick=e=>{if(e.target===dialog)dialog.close();};
 if('IntersectionObserver' in window)new IntersectionObserver(entries=>{$('.bottom').classList.toggle('is-hidden',entries[0].isIntersecting);},{threshold:.15}).observe($('#consult'));
+const storyScroll=$('.story-scroll');
+function moveStory(direction){const card=storyScroll.querySelector('.story-card');const step=card.getBoundingClientRect().width+13;storyScroll.scrollBy({left:direction*step,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}
+$('#storyPrev').onclick=()=>moveStory(-1);
+$('#storyNext').onclick=()=>moveStory(1);
