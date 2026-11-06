@@ -14,3 +14,5 @@ header{gap:16px;padding-top:18px;padding-bottom:15px}a.mood-wordmark{display:inl
 footer .footer-tagline{font-family:Pretendard,-apple-system,BlinkMacSystemFont,sans-serif;font-weight:500;font-size:15px;line-height:1.8;letter-spacing:-.35px;color:#a78bac;margin:18px 0 24px;word-break:keep-all}
 
 .links>a .channel-label{display:flex;align-items:center;gap:10px;min-width:0}.channel-icon{width:25px;height:25px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}.channel-icon svg{width:21px;height:21px;display:block}.home-icon{background:#ede3f6;color:#a184bd}.instagram-icon{background:radial-gradient(circle at 28% 100%,#ffd36b 0,#ee8b70 30%,#d75a9c 58%,#9172c7 85%);color:white}.links>a .instagram-label{display:inline;line-height:1.6}.instagram-label small{margin-left:5px}@media(max-width:360px){.instagram-label small{display:block;margin-left:0}}
+
+.intro .intro-greeting{font-family:Pretendard,-apple-system,BlinkMacSystemFont,sans-serif;font-weight:500;font-size:15px;line-height:1.8;letter-spacing:-.35px;color:#a78bac;margin:22px 0 12px;word-break:keep-all}
